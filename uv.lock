@@ -208,6 +208,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "logot" },
     { name = "nuitka" },
     { name = "ordered-set" },
     { name = "pre-commit" },
@@ -233,6 +234,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "logot", specifier = ">=1.4.0" },
     { name = "nuitka", specifier = ">=2.5.7" },
     { name = "ordered-set", specifier = ">=4.1.0" },
     { name = "pre-commit", specifier = ">=4.2.0" },
@@ -245,6 +247,15 @@ dev = [
     { name = "pytest-timeout", specifier = ">=2.4.0" },
     { name = "pytest-xdist", specifier = ">=3.7.0" },
     { name = "ruff", specifier = ">=0.8.0" },
+]
+
+[[package]]
+name = "logot"
+version = "1.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/85/e8/696a5b0721f88be2369694fa91c792d910636fa0f6a7a5444d6ecbed645a/logot-1.4.0.tar.gz", hash = "sha256:a42da87594c00c7252d4808ed35e66056dee880a31944bf2b8adb7d24385dd7a", size = 14014 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fb/6d/801c2019448b42fa47b24a77662f9dfcc6e625820e4a86e5dabcfeadc6ca/logot-1.4.0-py3-none-any.whl", hash = "sha256:86f6d5e289cef1241634faa6fc011b33c442fd95446a6434a67493e7d1f24c7a", size = 21742 },
 ]
 
 [[package]]

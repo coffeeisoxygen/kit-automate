@@ -47,6 +47,7 @@ dev = [
     "ordered-set>=4.1.0",
     "pytest-timeout>=2.4.0",
     "pytest-xdist>=3.7.0",
+    "logot>=1.4.0",
 ]
 
 # configuration start here we can split itu ruff.toml, pre-commit.toml, pytest.ini, etc but keep it simple for now
@@ -201,6 +202,9 @@ omit = [
     "*/shibokensupport/*",
     "*/pyscript/*",
     "*/signature_bootstrap.py",
+    "kit_automate/__init__.py",          # ✅ Exclude init files
+    "kit_automate/_version.py",          # ✅ Exclude version file
+    "kit_automate/shared/custom_log.py", # ✅ Exclude main entry point
 ]
 
 [tool.coverage.report]
