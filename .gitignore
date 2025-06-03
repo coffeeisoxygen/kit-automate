@@ -1,0 +1,121 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# personal configuration files
+.config/
+.github/instructions/
+.github/copilot-instructions.md
+.personal/
+
+# generated reports from pytest and coverage
+.reports/
+
+.pytest_cache/
+.ruff_cache/
+
+# generated versions files
+src/kit_automate/_version.py
+
+# IDE spesifik folder
+.vscode/
+
+# ========================================
+# ADDITIONAL GENERATED FILES
+# ========================================
+
+# Python build artifacts
+*.whl
+*.tar.gz
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Compilation and cache files
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.dylib
+.Python
+
+# Testing and coverage additional files
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Playwright specific (since you use playwright)
+playwright-report/
+test-results/
+playwright/.cache/
+
+# PySide6/Qt generated files
+*.qmlc
+*.jsc
+moc_*.cpp
+moc_*.h
+qrc_*.py
+ui_*.py
+
+# Nuitka compilation (since you have it in dev deps)
+*.build/
+*.dist/
+*.onefile-build/
+
+# Setuptools SCM (version generation)
+*/_version.py
+*/_version.txt
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Database files (if using SQLite locally)
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+*.key
+*.pem
+
+# Backup files
+*.bak
+*.backup
+*.orig
