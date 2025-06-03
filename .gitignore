@@ -119,3 +119,9 @@ secrets.json
 *.bak
 *.backup
 *.orig
+
+# codeQL
+*.ql
+*.qll
+*.qlpack
+codeql-custom-queries-python/
