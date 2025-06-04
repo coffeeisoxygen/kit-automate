@@ -12,6 +12,7 @@ wheels/
 # personal configuration files
 .config/
 .github/instructions/
+.github/prompts/
 .github/copilot-instructions.md
 .personal/
 
@@ -125,3 +126,4 @@ secrets.json
 *.qll
 *.qlpack
 codeql-custom-queries-python/
+dev/

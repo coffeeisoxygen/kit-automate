@@ -87,7 +87,7 @@ repos:
   # 4. UV (Dependency Management)
   # ========================================
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.7.9
+    rev: 0.7.10
     hooks:
       # Update lockfile when deps change
       - id: uv-lock
@@ -129,6 +129,13 @@ repos:
         entry: python -c "import sys; print('LF check passed')"
         language: system
         files: '\.(py|toml|yaml|yml)$'
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.27.0
+    hooks:
+      - id: gitleaks
+        name: "detect hardcoded secrets"
+        description: "Detect hardcoded secrets using Gitleaks"
 
 # ========================================
 # CONFIGURATION

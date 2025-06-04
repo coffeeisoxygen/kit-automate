@@ -1,3 +1,5 @@
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
 # Modkit Automod
 
 Modkit Automod adalah sebuah proyek yang bertujuan untuk mengotomatiskan proses di website dengan dukungan modem pool GSM. Proyek ini dirancang untuk sistem MSISDN dan verifikasi OTP.

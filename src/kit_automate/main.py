@@ -1,29 +1,45 @@
+"""Main entry point for the kit_automate application."""
+
+import sys
+
 from loguru import logger
 
 
-def nice_main():
-    # Use a regular print statement to verify terminal output
-    print("Starting kit-automate...")
+def main():
+    """Main entry point for the kit_automate application."""
+    app_context = None
+    try:
+        # ✅ ONE LINE INITIALIZATION
+        from kit_automate.config import create_application_context
 
-    # Log messages at different levels
-    logger.debug("Debug message from kit-automate")
-    logger.info("Info message from kit-automate")
-    logger.warning("Warning message from kit-automate")
+        app_context = create_application_context()
 
-    # More complex message to test formatting
-    logger.success("Kit-automate started successfully!")
-    logger.error("This is an error message from kit-automate")
-    logger.critical("Critical error in kit-automate")
+        logger.info("Starting kit_automate application...")
+        logger.info("Database connection successful")
 
-    # Simulate a warning with a custom message
-    logger.warning("This is a custom warning message from kit-automate")
+        # TODO: Add actual application logic here
+        # - GSM modem initialization
+        # - Android device detection
+        # - GUI startup
 
-    # Log an exception (uncomment to test)
-    # try:
-    #     1 / 0  # This will raise a ZeroDivisionError
-    # except ZeroDivisionError as e:
-    #     logger.exception("An exception occurred: {}", e)
+        logger.info("kit_automate application finished successfully.")
+
+    except RuntimeError as e:
+        logger.error(f"Application failed to start: {e}")
+        return 1
+    except KeyboardInterrupt:
+        logger.info("Application interrupted by user")
+        return 0
+    except Exception as e:
+        logger.error(f"Unexpected error: {e}")
+        return 1
+    finally:
+        # Cleanup if context exists
+        if app_context is not None:
+            app_context.cleanup()
+
+    return 0
 
 
 if __name__ == "__main__":
-    nice_main()
+    sys.exit(main())
